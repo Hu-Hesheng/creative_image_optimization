@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#big files
+Challenge_Data.zip
+data/Challenge_Data
