@@ -24,8 +24,8 @@ There are several types of NNs:
 # How is deep learning applied to computer vision tasks?
 So how exactly is DL used in computer vision? With the help of convolutional neural networks, deep learning is able to perform the following tasks:
 
-  object recognition
-  face recognition
-  motion detection
-  pose estimation
-  semantic segmentation
+ - object recognition
+ - face recognition
+ - motion detection
+ - pose estimation
+ - semantic segmentation
