@@ -29,3 +29,17 @@ So how exactly is DL used in computer vision? With the help of convolutional neu
  - motion detection
  - pose estimation
  - semantic segmentation
+
+# Installation guide
+* git clone https://github.com/Hu-Hesheng/creative_image_optimization
+* cd creative_image_optimization
+* pip install -r requirements.txt
+
+# Contrubutors
+* [Natnael Masresha](https://github.com/Nathnael12)
+* [Amanuel Zewdu](https://github.com/Amanuel3065)
+* [Yohans Samuel](https://github.com/YohansSamuel)
+* [Bekalu Tadele](https://github.com/BekaluTa)
+* [Andenet Alexander](https://github.com/andyalex234)
+* [Genet Shanko](https://github.com/gshanko125298)
+* [Wangui Gachugu](https://github.com/akrobi)
