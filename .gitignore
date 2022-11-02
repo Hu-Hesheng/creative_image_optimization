@@ -130,5 +130,7 @@ dmypy.json
 
 
 #big files
-Challenge_Data.zip
 data/Challenge_Data
+
+# untrack unnecessary trial files
+/junk
