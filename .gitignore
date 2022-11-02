@@ -130,7 +130,7 @@ dmypy.json
 
 
 #big files
-data/Challenge_Data
+data/Challenge_Data/Assets/
 
 # untrack unnecessary trial files
 /junk
