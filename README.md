@@ -16,10 +16,10 @@ Each neuron performs its own simple operation on input from other units and send
 
 There are several types of NNs:
 
-  convolutional (CNN)
-  recurrent (RNN)
-  generative adversarial (GAN)
-  recursive
+- convolutional (CNN)
+- recurrent (RNN)
+- generative adversarial (GAN)
+- recursive
   
 # How is deep learning applied to computer vision tasks?
 So how exactly is DL used in computer vision? With the help of convolutional neural networks, deep learning is able to perform the following tasks:
