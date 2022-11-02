@@ -5,9 +5,9 @@ import smart_open as so
 import boto3
 
 class Loader():
-    def __init__():
+    def __init__(self):
         pass
-    def load_csv(bucket_path:str,file_path:str,save=False):
+    def load_csv(self,bucket_path:str,file_path:str,save=False):
         with so.open(bucket_path, 'rb') as file_data:
             with zipfile.ZipFile(file_data) as z:
                 with z.open(file_path) as zip_file_data:
