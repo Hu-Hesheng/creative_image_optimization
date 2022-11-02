@@ -29,6 +29,7 @@ So how exactly is DL used in computer vision? With the help of convolutional neu
  - motion detection
  - pose estimation
  - semantic segmentation
+
 some of tools will be used for image segmention such as OpenCV(Yolo 7) and Semantic Segmentation.  
 
 # Installation guide
