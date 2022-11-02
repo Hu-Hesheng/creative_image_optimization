@@ -35,7 +35,7 @@ So how exactly is DL used in computer vision? With the help of convolutional neu
 * cd creative_image_optimization
 * pip install -r requirements.txt
 
-# Contrubutors
+# Contributors
 * [Natnael Masresha](https://github.com/Nathnael12)
 * [Amanuel Zewdu](https://github.com/Amanuel3065)
 * [Yohans Samuel](https://github.com/YohansSamuel)
