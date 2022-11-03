@@ -33,9 +33,12 @@ So how exactly is DL used in computer vision? With the help of convolutional neu
 some of tools will be used for image segmention such as OpenCV(YoloV7) and Semantic Segmentation.  
 
 # Installation guide
-* git clone https://github.com/Hu-Hesheng/creative_image_optimization
-* cd creative_image_optimization
-* pip install -r requirements.txt
+
+```bash
+git clone https://github.com/Hu-Hesheng/creative_image_optimization
+cd creative_image_optimization
+pip install -r requirements.txt
+```
 
 # Contributors
 * [Natnael Masresha](https://github.com/Nathnael12)
