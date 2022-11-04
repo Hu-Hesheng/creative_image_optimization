@@ -6,8 +6,8 @@ Computer Vision for Creative Optimisation: KPI maximisation through image analys
 This challenge utilizes Computer Vision for Creative Optimization and KPI maximization through image analysis. Computer vision technology has transformed the world by allowing machines to achieve human-level understanding of images and videos. The success of deep learning-based computer vision has led to a number of novel applications such as Autonomous driving for cars and tumor detection.
 
 # Computer vision
-  Computer vision (CV) is a field of artificial intelligence that enables computers to extract information from images, videos, and other visual sources.
-  computer vision, computer scientists extract knowledge from an image by manipulating it through image transforms. In the mathematical language of image algebra an image transformation often corresponds to an image-template product. When performing this operation on a computer, savings in time and memory as well as a better fit to the specific computer architecture can often be achieved by using the technique of template decomposition.
+Computer vision (CV) is a field of artificial intelligence that enables computers to extract information from images, videos, and other visual sources.
+computer vision, computer scientists extract knowledge from an image by manipulating it through image transforms. In the mathematical language of image algebra an image transformation often corresponds to an image-template product. When performing this operation on a computer, savings in time and memory as well as a better fit to the specific computer architecture can often be achieved by using the technique of template decomposition.
   
 # Deep learning
 Deep learning (DL) is a machine learning method based on artificial neural networks (ANN). Deep learning involves training artificial neural networks on large datasets. These networks consist of many layers of information processing units (neurons) that are loosely inspired by the way the brain works.
