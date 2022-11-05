@@ -49,7 +49,7 @@ def get_text(img_path:str,convert_to_gray:bool=True,plot:bool=False):
         return get_pure_list(pytesseract.image_to_string(img))
     
     
-def add_feature(game_id:str):
+def add_text_feature(game_id:str):
     path  = f'/home/amanuel_zewdu/creative_image_optimization/data/Challenge_Data/Assets/{game_id}/'
     file_names = get_files_name(path,IMAGES_EXT)
     all_texts = []
