@@ -1,7 +1,7 @@
 import os
 import sys
 
-def get_files_name_(directory:str, filter_extension:list=None,exclude_names:list=None)->list:
+def get_files_name_with_extension_filter(directory:str, filter_extension:list=None,exclude_names:list=None)->list:
     
     # directory = f'/home/amanuel_zewdu/creative_image_optimization/data/Challenge_Data/Assets/{directory}/'
     
