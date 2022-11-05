@@ -50,7 +50,7 @@ def get_unique_objects(all_objects:list):
 
 # all in one
 # @jit(target_backend='cuda') 
-def add_feature(game_id:str):
+def add_object_feature(game_id:str):
     path  = f'/home/amanuel_zewdu/creative_image_optimization/data/Challenge_Data/Assets/{game_id}/'
     exclude = ["text","video","background"]
     file_names = get_files_name_with_extension_filter(path,IMAGES_EXT,exclude)
