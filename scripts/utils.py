@@ -1,7 +1,7 @@
 import os
 import sys
 
-def get_files_name(directory:str, filter_extension:list=None,exclude_names:list=None)->list:
+def get_files_name_(directory:str, filter_extension:list=None,exclude_names:list=None)->list:
     
     # directory = f'/home/amanuel_zewdu/creative_image_optimization/data/Challenge_Data/Assets/{directory}/'
     
@@ -19,6 +19,25 @@ def get_files_name(directory:str, filter_extension:list=None,exclude_names:list=
             if os.path.isfile(f):
                 if ~any(substring in filename.split('.')[0] for substring in exclude_names):
                     files.append(filename)
+
+    return files
+
+def get_files_name(directory:str, filter_extension:list=None)->list:
+    
+    # directory = f'/home/amanuel_zewdu/creative_image_optimization/data/Challenge_Data/Assets/{directory}/'
+    
+    files = []
+    for filename in os.listdir(directory):
+        f = os.path.join(directory, filename)
+        
+        # checking if it is a file
+        if filter_extension != None:
+            if os.path.isfile(f):
+                if filename.split('.')[-1].upper() in filter_extension:
+                    files.append(filename)
+        else:
+            if os.path.isfile(f):
+                files.append(filename)
 
     return files
 
