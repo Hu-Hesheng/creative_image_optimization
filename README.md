@@ -43,6 +43,7 @@ pip install -r requirements.txt
 # Contributors
 
 <img src="https://contrib.rocks/image?repo=Hu-Hesheng/creative_image_optimization"/>
+
 * [Natnael Masresha](https://github.com/Nathnael12)
 * [Amanuel Zewdu](https://github.com/Amanuel3065)
 * [Yohans Samuel](https://github.com/YohansSamuel)
