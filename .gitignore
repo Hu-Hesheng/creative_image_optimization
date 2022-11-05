@@ -131,7 +131,9 @@ dmypy.json
 
 #big files
 data/Challenge_Data/Assets/
-
+data/extracted
+data/processed
 # untrack unnecessary trial files
 /junk
 .mainevt
+Challenge_Data.zip
