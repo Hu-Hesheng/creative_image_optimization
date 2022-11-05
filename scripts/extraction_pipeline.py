@@ -19,10 +19,10 @@ class ExtractionPipeline():
             
         self.IMAGES_EXT = ["JPG","PNG","GIF","WEBP","TIFF","PSD","RAW","BMP","HEIF","INDD","JPEG"]
         self.VIDEO_EXT = ["WEBM","MPG","MP2","MPEG","MPE","MPV","OGG","MP4","M4P","M4V","AVI","WMV","MOV","QT","FLV","SWF"]
+        self.DIRECTORY_PATH = directory_path
         
         self.loader = Loader()
         self.save_files = save_files
-        self.directory_path = directory_path
         df = self.loader.load_csv(bucket,csv_path)
         self.df = df
         
@@ -57,7 +57,7 @@ class ExtractionPipeline():
             df_logo = df.copy()
         
         df_logo.drop(columns=["preview_link","ER","CTR"],inplace=True)
-        df_logo["all_files"] = df_logo.game_id.apply(lambda x:get_files_name(f'{DIRECTORY_PATH}{x}/'))
+        df_logo["all_files"] = df_logo.game_id.apply(lambda x:get_files_name(f'{self.DIRECTORY_PATH}{x}/'))
         df_logo['concat'] = df_logo.all_files.apply(lambda x: " ".join(x))
         
         contain_logo = df_logo[df_logo.concat.str.lower().str.contains("logo")]
@@ -70,3 +70,14 @@ class ExtractionPipeline():
             contain_logo.to_csv("creatives_with_logo_information.csv")
         
         return contain_logo
+    
+    def extract_features(self,df:pd.DataFrame):
+        if df == None:
+            df = self.df.copy()
+            
+        text_df = self.extract_text(df)
+        object_df = self.extract_objects(df)
+        logo_df = self.extract_logo(df)    
+        
+        all_df = (text_df.merge(object_df,on="game_id")).merge(logo_df,on="game_id")
+        return all_df
