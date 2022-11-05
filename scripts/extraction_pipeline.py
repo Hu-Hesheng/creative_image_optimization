@@ -6,7 +6,7 @@ from object_extraction import *
 from text_extraction import *
 
 class ExtractionPipeline():
-    def __init__(self,csv_path:str=None,directory_path:str=None,bucket:str = None,save_files:bool=False):
+    def __init__(self,df:pd.DataFrame=pd.DataFrame(),csv_path:str=None,directory_path:str=None,bucket:str = None,save_files:bool=False):
         
         if directory_path == None:
             directory_path = "/home/amanuel_zewdu/creative_image_optimization/data/Challenge_Data/Assets/"
@@ -23,11 +23,13 @@ class ExtractionPipeline():
         
         self.loader = Loader()
         self.save_files = save_files
-        df = self.loader.load_csv(bucket,csv_path)
+        if df.empty:
+            df = self.loader.load_csv(bucket,csv_path)
+        
         self.df = df
         
-    def extract_text(self,df:pd.DataFrame=None) -> pd.DataFrame:
-        if df == None:
+    def extract_text(self,df:pd.DataFrame=pd.DataFrame()) -> pd.DataFrame:
+        if df.empty:
             df_text = self.df.copy()
         else:
             df_text = df.copy()
@@ -38,8 +40,8 @@ class ExtractionPipeline():
             
         return df_text
     
-    def extract_objects(self,df:pd.DataFrame=None) -> pd.DataFrame:
-        if df == None:
+    def extract_objects(self,df:pd.DataFrame=pd.DataFrame()) -> pd.DataFrame:
+        if df.empty:
             df_object = self.df.copy()
         else:
             df_object = df.copy()
@@ -50,8 +52,8 @@ class ExtractionPipeline():
             
         return df_object
     
-    def extract_logo(self,df:pd.DataFrame=None) -> pd.DataFrame:
-        if df == None:
+    def extract_logo(self,df:pd.DataFrame=pd.DataFrame()) -> pd.DataFrame:
+        if df.empty:
             df_logo = self.df.copy()
         else:
             df_logo = df.copy()
@@ -63,21 +65,26 @@ class ExtractionPipeline():
         contain_logo = df_logo[df_logo.concat.str.lower().str.contains("logo")]
         contain_logo['file_name'] = contain_logo.all_files.apply(lambda x: filter_list(x,"logo"))
         contain_logo.drop(columns=["all_files","concat"],inplace=True)
-        contain_logo[["shape","top_left","bottom_right"]] =  contain_logo.apply(lambda x: pd.Series(find_logo_position(x.game_id,x.file_name)) ,axis = 1)
-        contain_logo[["LAR"]] =  contain_logo.apply(lambda x: pd.Series(find_logo_area_ratio(x["shape"],x["top_left"],x["bottom_right"])) ,axis = 1)
-        contain_logo["LAR"] =  contain_logo.LAR.apply(lambda x: x if x <=1 else 0 )
-        if self.save_files:
-            contain_logo.to_csv("creatives_with_logo_information.csv")
+        if contain_logo.shape[0] > 0:
+            contain_logo[["shape","top_left","bottom_right"]] = contain_logo.apply(lambda x: pd.Series(find_logo_position(x.game_id,x.file_name)) ,axis = 1)
+        
+            contain_logo[["LAR"]] =  contain_logo.apply(lambda x: pd.Series(find_logo_area_ratio(x["shape"],x["top_left"],x["bottom_right"])) ,axis = 1)
+            contain_logo["LAR"] =  contain_logo.LAR.apply(lambda x: x if x <=1 else 0 )
+            if self.save_files:
+                contain_logo.to_csv("creatives_with_logo_information.csv")
         
         return contain_logo
     
-    def extract_features(self,df:pd.DataFrame):
-        if df == None:
+    def extract_features(self,df:pd.DataFrame=pd.DataFrame()):
+        if df.empty:
             df = self.df.copy()
             
         text_df = self.extract_text(df)
         object_df = self.extract_objects(df)
         logo_df = self.extract_logo(df)    
         
-        all_df = (text_df.merge(object_df,on="game_id")).merge(logo_df,on="game_id")
+        all_df = (text_df.merge(object_df,how="left",on="game_id")).merge(logo_df,how="left",on="game_id")
         return all_df
+
+
+
