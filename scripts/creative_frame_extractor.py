@@ -9,8 +9,8 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from os import path
 from subprocess import Popen, call
-import pyautogui
-import ffmpeg
+# import pyautogui
+# import ffmpeg
 
 class CreativeFrameExtractor:
     '''
@@ -77,14 +77,14 @@ class CreativeFrameExtractor:
 
         return False
     
-    @staticmethod
-    def terminate(process: Popen[bytes]) -> None:
-        '''
-        Function to stop/terminate a process.
-        '''
-        # Video Recording Process Terminator
-        if process.poll() is None:
-            call("taskkill /F /T /PID " + str(process.pid))
+    # @staticmethod
+    # def terminate(process: Popen[bytes]) -> None:
+    #     '''
+    #     Function to stop/terminate a process.
+    #     '''
+    #     # Video Recording Process Terminator
+    #     if process.poll() is None:
+    #         call("taskkill /F /T /PID " + str(process.pid))
 
     @staticmethod
     def crop_video(filename: str, x_pos: float = 0, y_pos: float = 70, width: float = 650, height: float = 970) -> None:
