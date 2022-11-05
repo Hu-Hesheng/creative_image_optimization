@@ -1,8 +1,9 @@
-import pandas as pd
+#!.venv/bin/python
+
 import zipfile
 from io import StringIO
+import pandas as pd
 import smart_open as so
-import boto3
 
 class Loader():
     def __init__(self):
