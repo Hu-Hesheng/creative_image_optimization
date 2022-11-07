@@ -17,7 +17,7 @@ def app():
 
     st.header("Object populations")
     st.subheader("most objects in an asset")
-    st.heat_map(df_cleaned['all_objects_count'])
+    st.line_chart(df_cleaned['all_objects_count'])
 
     
 
