@@ -24,7 +24,7 @@ def app():
 
     st.header("Logo to preview image ratio")
     st.subheader("logo ratio")
-    st.plotly_chart(df_cleaned['LAR'])
+    st.bar_chart(df_cleaned['LAR'])
 
 
     
