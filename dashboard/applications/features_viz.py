@@ -13,7 +13,6 @@ def app():
 
     st.header("top 10 object populated creatives")
     st.subheader("mots objects in an asset")
-    st.dataframe(df_cleaned)
     st.bar_chart(df_cleaned['all_objects_count'])
 
     
