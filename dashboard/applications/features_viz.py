@@ -11,9 +11,13 @@ def app():
     df_cleaned = pd.read_csv('data/cleaned_df.csv')
     
 
-    st.header("top 10 object populated creatives")
-    st.subheader("mots objects in an asset")
+    st.header("Object populations")
+    st.subheader("most objects in an asset")
     st.bar_chart(df_cleaned['all_objects_count'])
+
+    st.header("Object populations")
+    st.subheader("most objects in an asset")
+    st.heat_map(df_cleaned['all_objects_count'])
 
     
 
