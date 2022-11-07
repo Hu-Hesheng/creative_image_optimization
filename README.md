@@ -39,6 +39,9 @@ git clone https://github.com/Hu-Hesheng/creative_image_optimization
 cd creative_image_optimization
 pip install -r requirements.txt
 ```
+# Deployment 
+streamlit
+https://amanuel3065-creative-image-optimization-app-yu2h7h.streamlit.app/
 
 # Contributors
 
