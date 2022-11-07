@@ -22,8 +22,15 @@ def app():
     st.bar_chart(df_cleaned['cta_width'])
     
 
-    st.header("Feature Importance")
+    st.header("Click through rate distribution")
     st.image('data/CTR_dist.png')
 
+    st.header("Feature Importance")
+    st.image('data/feature.png')
+
+
     st.header("Correlation matrix")
+    st.image('data/download (2).png')
+
+    st.header("Evaluation metrics")
     st.image('data/download (2).png')
