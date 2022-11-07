@@ -16,16 +16,16 @@ def app():
 
     st.header("To calculate KPI, enter values below.")
 
-    session_count = st.number_input('Enter sessions', key='a')
-    total_time = st.number_input('Enter total time', key='b')
-    total_data = st.number_input('Enter total data', key='c')
-    total_retransmission = st.number_input('Enter tcp retransmission', key='d')
-    average_delay = st.number_input('Enter average delay', key='e')
-    total_throughput = st.number_input('Enter average throughput', key='f')
+    st.header("")
+    no_of_unique_objects = st.number_input('unique objects', key='a')
+    eng_width = st.number_input('width of engagement button', key='b')
+    eng_height = st.number_input('height of engagement button', key='c')
+    #total_retransmission = st.number_input('Enter tcp retransmission', key='d')
+    #average_delay = st.number_input('Enter average delay', key='e')
+    #total_throughput = st.number_input('Enter average throughput', key='f')
 
     if st.button('KPI prediction'):
-        array = [session_count, total_time, total_data,
-                 total_retransmission, average_delay, total_throughput]
+        array = [no_of_unique_objects, eng_width, eng_height]
         val = model.predict([array])
         KPI = [i[0] for i in val][0]
         st.write(
