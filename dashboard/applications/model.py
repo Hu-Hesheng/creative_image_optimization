@@ -27,7 +27,7 @@ def app():
 
     if st.button('KPI prediction'):
         array = [no_of_unique_objects, eng_width, eng_height]
-        val = model.predict([array])
+        val = pickled_model.predict([array])
         KPI = [i[0] for i in val][0]
         st.write(
             "The estimated KPI is: {:.3f}".format(KPI))
