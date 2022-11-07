@@ -1,0 +1,32 @@
+artifact_path: model
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.8.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.1.2
+mlflow_version: 1.30.0
+model_uuid: 26af033c2c024883b0f595c3183659e7
+run_id: 69b33fb34e144e248e08a22270da80f3
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  type: dataframe
+signature:
+  inputs: '[{"name": "all_text_word_count", "type": "double"}, {"name": "LAR", "type":
+    "double"}, {"name": "all_objects_count", "type": "long"}, {"name": "unique_objects_count",
+    "type": "long"}, {"name": "cta_text_word_count", "type": "double"}, {"name": "cta_width",
+    "type": "double"}, {"name": "cta_height", "type": "double"}, {"name": "red", "type":
+    "double"}, {"name": "green", "type": "double"}, {"name": "blue", "type": "double"},
+    {"name": "logo_width", "type": "double"}, {"name": "logo_height", "type": "double"},
+    {"name": "eng_width", "type": "double"}, {"name": "eng_height", "type": "double"},
+    {"name": "preview_width", "type": "double"}, {"name": "preview_height", "type":
+    "double"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+utc_time_created: '2022-11-07 04:30:44.416003'
