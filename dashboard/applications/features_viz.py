@@ -33,4 +33,4 @@ def app():
     st.image('data/download (2).png')
 
     st.header("Evaluation metrics")
-    st.image('data/download (2).png')
+    st.image('data/image (2).png')
