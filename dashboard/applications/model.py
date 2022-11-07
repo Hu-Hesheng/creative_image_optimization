@@ -25,22 +25,10 @@ def app():
     #total_retransmission = st.number_input('Enter tcp retransmission', key='d')
     #average_delay = st.number_input('Enter average delay', key='e')
     #total_throughput = st.number_input('Enter average throughput', key='f')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
-    eng_height = st.number_input('height of engagement button', key='c')
     
 
     if st.button('KPI prediction'):
-        array = [no_of_unique_objects, eng_width, eng_height,0.2,0.5,0.2,0.8,0.45,
-        7.8,60,70,55,60,13,21,0.2]
+        array = [no_of_unique_objects, eng_width, eng_height]
         val = pickled_model.predict([array])
         KPI = [i[0] for i in val][0]
         st.write(
