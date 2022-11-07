@@ -10,7 +10,8 @@ import sys
 def app():
 
     # Load Saved Results Data
-    model = load(filename='models/07-11-2022-07-33-52-3.07%.pkl')
+    pickled_model = pickle.load(open('models/07-11-2022-07-33-52-3.07%.pkl', 'rb'))
+    #model = load(filename='models/07-11-2022-07-33-52-3.07%.pkl')
 
     st.title("KPI Model")
 
