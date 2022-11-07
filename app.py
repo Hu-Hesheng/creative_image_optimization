@@ -17,8 +17,6 @@ st.sidebar.markdown("""
 
 # Add all your application here
 app.add_app("features_vizualization", features_viz.app)
-""" app.add_app("experience_analytics", experience_analytics.app)
-app.add_app("satisfaction_analysis", satisfaction_analysis.app) """
 app.add_app("Model", model.app) 
 
 # The main app
