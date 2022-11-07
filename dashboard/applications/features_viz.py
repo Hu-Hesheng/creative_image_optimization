@@ -18,7 +18,7 @@ def app():
 
     st.header("Creatives with the widest CTA buttons")
     st.subheader("Wide CTAs")
-    st.map(df_cleaned['cta_width'])
+    st.bar_chart(df_cleaned['cta_width'])
     
 
     st.header("Feature Importance")
