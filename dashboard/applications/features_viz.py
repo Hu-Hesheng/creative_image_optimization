@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import sys
+import sklearn
 
 
 def app():
@@ -20,6 +21,9 @@ def app():
     st.subheader("Wide CTAs")
     st.bar_chart(df_cleaned['cta_width'])
     
+
+    st.header("Feature Importance")
+    st.image('data/CTR_dist.png')
 
     st.header("Feature Importance")
     st.image('data/feature.png')
