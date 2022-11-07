@@ -2,7 +2,7 @@
 
 from numpy.core.records import array
 import streamlit as st
-from joblib import load
+from pickle import load
 import numpy as np
 import sys
 
