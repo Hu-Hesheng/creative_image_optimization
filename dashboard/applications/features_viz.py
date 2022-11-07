@@ -25,5 +25,5 @@ def app():
     st.header("Feature Importance")
     st.image('data/CTR_dist.png')
 
-    st.header("Feature Importance")
-    st.image('data/feature.png')
+    st.header("Correlation matrix")
+    st.image('data/download (2).png')
