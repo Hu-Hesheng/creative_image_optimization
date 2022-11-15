@@ -1,5 +1,6 @@
 
 
+from numpy.core.records import array
 import streamlit as st
 from pickle import load
 import numpy as np
