@@ -1,6 +1,5 @@
 
 
-from numpy.core.records import array
 import streamlit as st
 from pickle import load
 import numpy as np
@@ -11,7 +10,7 @@ import sys
 def app():
 
     # Load Saved Results Data
-    pickled_model = load(open('../../models/07-11-2022-07-33-52-3.07%.pkl', 'rb'))
+    pickled_model = load(open('models/07-11-2022-07-33-52-3.07%.pkl', 'rb'))
     #model = load(filename='models/07-11-2022-07-33-52-3.07%.pkl')
 
     st.title("KPI Model")
