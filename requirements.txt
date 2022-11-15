@@ -88,5 +88,6 @@ websocket-client==1.4.1
 widgetsnbextension==4.0.3
 zipp==3.10.0
 
-sklearn
+
 plotly
+sklearn
